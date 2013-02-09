@@ -8,12 +8,19 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import java.util.Date;
 import android.view.*;
+import android.widget.Toast;
+
 
 public class MainActivity extends Activity {
 	
 	private Button select;
 	private EditText duration;
 	private DatePicker startDate;
+	private String[][] messages = {
+		{"FOSTATA", "FANOSA", "FOSHITE"},
+        {"Smith", "Jones"}
+	};
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +28,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		addBtnListener();
+		int randomNum = (int)(Math.random()*messages[0].length); 
+		showMessage(messages[0][randomNum]);
 	}
 
 	public void addBtnListener()
@@ -45,5 +54,9 @@ public class MainActivity extends Activity {
  
 		}); 
 	}
-
+	
+	private void showMessage(String msg)
+	{	
+		Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+	}
 }
