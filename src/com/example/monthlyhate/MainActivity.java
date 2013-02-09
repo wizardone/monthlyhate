@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		addBtnListener();
+		//addBtnListener();
 	}
 
 	@Override
@@ -32,22 +32,7 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	
-	private void getSelectedDate()
-	{
-		dp = (DatePicker) findViewById(R.id.datePicker);
-	}
-	
-	private void addDates()
-	{
-		Calendar cal = Calendar.getInstance();              
-		Intent intent = new Intent(Intent.ACTION_EDIT);
-		intent.setType("vnd.android.cursor.item/event");
-		intent.putExtra("beginTime", cal.getTimeInMillis());
-		intent.putExtra("allDay", true);
-		intent.putExtra("title", "Monthly Hate");
-		startActivity(intent);
-	}
+
 	
 	public void addBtnListener()
 	{
@@ -56,7 +41,7 @@ public class MainActivity extends Activity {
 		select.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				addDates();
+				
 			}
  
 		});
