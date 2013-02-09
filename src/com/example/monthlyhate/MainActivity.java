@@ -17,7 +17,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		showMessage(messages[0][0]);
+		int randomNum = (int)(Math.random()*messages[0].length); 
+		showMessage(messages[0][randomNum]);
 	}
 
 	@Override
