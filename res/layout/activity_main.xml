@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:gravity="top"
     tools:context=".MainActivity" >
 
@@ -14,14 +13,36 @@
         android:layout_alignParentTop="true"
         android:text="@string/enter_your_desired_date_and_be_prepared_to_face_the_monthly_hate" />
 
-    <Button
-        android:id="@+id/btnChangeDate"
+    <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/datePicker"
-        android:layout_marginLeft="104dp"
-        android:text="@string/select"
-        tools:ignore="UnknownIdInLayout" />
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/select_duration" >
+
+        <requestFocus />
+    </EditText>
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp" />
+
+    <Button
+        android:id="@+id/select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/datePicker1"
+        android:layout_below="@+id/datePicker1"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:text="@string/select_" />
 
 </RelativeLayout>
