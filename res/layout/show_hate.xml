@@ -8,6 +8,6 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#000000"
-    android:text="Showing the monthly hate" />
+    android:text="@string/show_hate" />
     
     </RelativeLayout>
