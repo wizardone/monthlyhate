@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="enter_your_desired_date_and_be_prepared_to_face_the_monthly_hate">Enter your desired date and be prepared to face the Monthly Hate</string>
-    <string name="select">Select</string>
+    <string name="select_">Select</string>
+    <string name="select_duration">Select duration in days:</string>
 
 </resources>

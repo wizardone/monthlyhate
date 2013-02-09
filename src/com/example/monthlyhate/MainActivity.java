@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 	
 	public void addBtnListener()
 	{
-		select = (Button) findViewById(R.id.btnChangeDate);
+		//select = (Button) findViewById(R.id.btnChangeDate);
 		 
 		select.setOnClickListener(new OnClickListener() {
 			@Override
