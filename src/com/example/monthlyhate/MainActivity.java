@@ -1,29 +1,23 @@
 package com.example.monthlyhate;
 
-import java.util.Calendar;
-import android.content.Intent;
-import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.app.Dialog;
-import android.view.View;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
-	private DatePicker dp;
-	private Button select;
+	private String[][] messages = {
+		{"FOSTATA", "FANOSA", "FOSHITE"},
+        {"Smith", "Jones"}
+	};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		addBtnListener();
+		showMessage(messages[0][0]);
 	}
 
 	@Override
@@ -33,33 +27,8 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	private void getSelectedDate()
-	{
-		dp = (DatePicker) findViewById(R.id.datePicker);
+	private void showMessage(String msg)
+	{	
+		Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
 	}
-	
-	private void addDates()
-	{
-		Calendar cal = Calendar.getInstance();              
-		Intent intent = new Intent(Intent.ACTION_EDIT);
-		intent.setType("vnd.android.cursor.item/event");
-		intent.putExtra("beginTime", cal.getTimeInMillis());
-		intent.putExtra("allDay", true);
-		intent.putExtra("title", "Monthly Hate");
-		startActivity(intent);
-	}
-	
-	public void addBtnListener()
-	{
-		select = (Button) findViewById(R.id.btnChangeDate);
-		 
-		select.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				addDates();
-			}
- 
-		});
-	}
-
 }

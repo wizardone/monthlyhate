@@ -14,13 +14,6 @@
         android:layout_alignParentTop="true"
         android:text="@string/enter_your_desired_date_and_be_prepared_to_face_the_monthly_hate" />
 
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1" />
-
     <Button
         android:id="@+id/btnChangeDate"
         android:layout_width="wrap_content"
