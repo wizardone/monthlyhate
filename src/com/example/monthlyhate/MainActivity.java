@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 		        SharedPreferences.Editor prefEditor = sharedPref.edit();
 		        prefEditor.putString("duration", durationValue);
 		        prefEditor.putLong("startdate", date.getTime());
-		        
+		        showMessage("Saved");
 		        prefEditor.commit();
 			}
  
