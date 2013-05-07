@@ -26,6 +26,10 @@
             android:name="com.example.monthlyhate.ShowHate"
             android:label="@string/app_name" >
         </activity>
+        <service
+		  android:name="MsgService"
+		  >
+		</service>
     </application>
 
 </manifest>
